@@ -58,29 +58,33 @@
 
   <div class="field label border" class:invalid={submitted && !appName}>
     <input type="text" bind:value={appName}>
-    <label>App Name</label>
+    <label>App Name <span style="color: red;">*</span></label>
+    <output>The name of the app.</output>
   </div>
 
   <div class="field label border">
     <input type="text" bind:value={appIconURL}>
-    <label>Icon URL</label>
+    <label>Icon Path/URL</label>
+    <output>The path or URL to the icon of the app.</output>
   </div>
 
   <div class="field label border" class:invalid={submitted && !appPath}>
     <input type="text" bind:value={appPath}>
-    <label>Execute Command</label>
+    <label>Execute Command <span style="color: red;">*</span></label>
+    <output>The command to run the app. eg; <code>.\VLC.UTILS.exe</code></output>
   </div>
 
   <div class="field label border" class:invalid={submitted && !appWorkingDirectory}>
     <input type="text" bind:value={appWorkingDirectory}>
-    <label>Working Directory</label>
+    <label>Working Directory <span style="color: red;">*</span></label>
+    <output>The directory to run the app at. eg; <code>D:\Apps\VLC.Utils\</code></output>
   </div>
 
   <CardApp
       name={appName || "App Name"}
       iconUrl={imageSrc(appIconURL) || "https://placehold.co/128x128"}
       executeCommand=""
-      workingDirectory={appWorkingDirectory || "/"}
+      workingDirectory=""
       isPreview={true}
   />
 
