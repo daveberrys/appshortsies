@@ -55,7 +55,6 @@
         <img src={imageSrc(iconUrl)} alt={name} class="large square"/>
         <div>
             <h5>{name}</h5>
-            <span class="_desc">{workingDirectory}</span>
         </div>
     </div>
 

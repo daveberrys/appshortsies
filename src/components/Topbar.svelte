@@ -1,19 +1,10 @@
 <script lang="ts">
-    import Settings from "./Popup/Settings.svelte"
+    import { openUrl } from "@tauri-apps/plugin-opener";
 
     let { onOpenAdd = () => {} }: { onOpenAdd: () => void } = $props()
-
     const listsOfOptions = [
-        {name: "Settings", icon: "settings", action: () => {openModal("settings")}},
+        {name: "Source Code (Github)", icon: "commit", action: () => {openUrl("https://github.com/daveberrys/appshortsies")}},
     ]
-
-    let modalSettings = $state(false)
-
-    function openModal(modal: string) {
-        if (modal === "settings") {
-            modalSettings = true
-        }
-    }
 </script>
 
 <footer>
@@ -43,5 +34,3 @@
         </div>
     </nav>
 </footer>
-
-<Settings bind:modalSettings />
