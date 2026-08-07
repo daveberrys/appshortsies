@@ -1,6 +1,7 @@
 <script lang="ts">
     import { invoke } from "@tauri-apps/api/core";
     import CardApp from "../CardApp.svelte";
+    import imageSrc from "../../lib/imageSrc";
 
     let { modalNew = $bindable(), onAppAdded = () => {} } = $props()
 
@@ -77,7 +78,7 @@
 
   <CardApp
       name={appName || "App Name"}
-      iconUrl={appIconURL || "https://placehold.co/128x128"}
+      iconUrl={imageSrc(appIconURL) || "https://placehold.co/128x128"}
       executeCommand=""
       workingDirectory={appWorkingDirectory || "/"}
       isPreview={true}

@@ -1,5 +1,6 @@
 <script lang="ts">
     import { invoke } from "@tauri-apps/api/core";
+    import imageSrc from "../lib/imageSrc";
 
     let {
       name,
@@ -51,7 +52,7 @@
 
 <article style="height: fit-content;">
     <div class="row">
-        <img src={iconUrl} alt={name} class="large square"/>
+        <img src={imageSrc(iconUrl)} alt={name} class="large square"/>
         <div>
             <h5>{name}</h5>
             <span class="_desc">{workingDirectory}</span>
