@@ -14,6 +14,7 @@
 - [How to use](#How-to-use)
 - [Downloads](#Downloads)
 - [Stack](#Stack)
+- [Amazing Forks](#Amazing-Forks)
 
 ## How to use;
 Just open the app. In the top right, you have a plus. Then you can put the following;
@@ -40,3 +41,7 @@ S/O to the following for making this project possible. Tauri for being the best-
 - [Tauri](https://tauri.app/) — Cross-platform framework & backend
 - [Svelte](https://svelte.dev/) — Frontend framework
 - [BeerCSS](https://beercss.com/) — UI framework
+
+## Amazing Forks
+Here are the amazing forks of this project.
+- [Solar Launcher](https://github.com/Team-SolarEngine/solar-lanucher) — Launcher of FNF, and codebase primarily from this project.
